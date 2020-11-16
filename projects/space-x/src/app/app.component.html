@@ -1,0 +1,17 @@
+<div className="container m-2 mt-4" style="background-color: #eee">
+  <label for="SpaceX" class="font-semibold text-2xl py-2 px-4 pl-0 m-2"
+    >SpaceX Launch programs</label
+  >
+  <div class="md:flex">
+    <spaceX-filter (filterChange)="space.getSpaceDataYearFilter($event)"></spaceX-filter>
+    <div
+      class="w-auto h-auto py-2 px-4 m-2 rounded md:flex md:flex-wrap md:w-100% md:ml-20"
+    >
+      <!-- card area -->
+      <spaceX-card ></spaceX-card>
+    </div>
+    <!-- <div class="md:flex-shrink-0 bg-blue md:w-60 rounded">
+      <div class="w-100 bg-blue"></div>
+    </div> -->
+  </div>
+</div>

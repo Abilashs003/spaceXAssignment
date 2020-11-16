@@ -1,0 +1,71 @@
+<div class="md:flex md:flex-wrap md:flex-order-2 lg:w-100%">
+<div
+class="bg-white py-2 px-4 m-2 md:h-80  md:w-1/3 lg:w-1/5 rounded"
+*ngFor="let item of space.spaceData"
+>
+<!-- image  -->
+<div class="flex-shrink-0 m-2" style="background-color: #eee">
+  <img
+    class="rounded-lg md:w-40"
+    src="{{ item.links.mission_patch }}"
+    width="448"
+    height="299"
+    alt="Space Vehicle"
+  />
+</div>
+<div class="mb-2">
+  <label
+    class="block text-sm font-bold ml-2"
+    style="color: #485296"
+    for="Name"
+  >
+    {{ item.mission_name }} #{{ space.spaceData.indexOf(item) + 1 }}
+  </label>
+</div>
+
+<div class="mb-2">
+  <label
+    class="block text-sm font-bold ml-2"
+    style="color: 48529"
+    for="missionId"
+  >
+    Mission Ids :
+  </label>
+  <ul
+    #missionId
+    class="block text-sm mb-2 ml-4 list-disc"
+    style="color: #999dc1"
+    for="Name"
+    *ngFor="let missionId of item?.mission_id"
+  >
+    <li class="ml-4">
+      {{ missionId }}
+    </li>
+  </ul>
+</div>
+<div>
+  <label class="block text-sm font-bold ml-2" for="launchYear">
+    Launch Year:
+    <label #launchYear for="launchYear" class="font-normal">{{
+      item.launch_year
+    }}</label>
+  </label>
+</div>
+<div>
+  <label class="block text-sm font-bold ml-2" for="successfulLaunch">
+    Successful Launch:
+    <label #successfulLaunch class="font-normal">{{
+      item?.launch_success
+    }}</label>
+  </label>
+</div>
+<div>
+  <label class="block text-sm font-bold ml-2" for="successfulLanding">
+    Successful Landing:
+    <label #successfulLanding class="font-normal">{{
+      item.rocket.first_stage.cores[0]?.land_success
+    }}</label>
+  </label>
+</div>
+</div>
+</div>

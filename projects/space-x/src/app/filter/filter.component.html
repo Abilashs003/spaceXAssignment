@@ -1,0 +1,52 @@
+<div class="md:flex md:m-4">
+  <div
+class="md:flex-shrink-0 w-auto h-auto bg-white rounded py-2 px-4 m-4 md:w-20%"
+>
+<div>
+  <label for="filters" class="font-semibold text-2xl py-2 px-4 pl-0 mb-2"
+    >Filters</label
+  >
+</div>
+<div>
+  <div class="text-gray-700 text-center p-2">Launch Year</div>
+  <hr className="mt-0" />
+  <div class="grid grid-cols-2 gap-5 m-2">
+    <div
+      class="rounded text-center bg-green-300 py-2 px-4 m-1 hover:bg-green-600"
+      *ngFor="let item of yearsList"
+    >
+      <button (click)="filterChange.emit(item)">{{ item }}</button>
+    </div>
+  </div>
+
+  <div class="text-gray-700 text-center p-2">Successful Launch</div>
+  <hr className="mt-0" />
+  <div class="grid grid-cols-2 gap-5 m-2">
+    <div
+      class="rounded text-center bg-green-300 py-2 px-4 m-1 hover:bg-green-600"
+    >
+      True
+    </div>
+    <div
+      class="rounded text-center bg-green-300 py-2 px-4 m-1 hover:bg-green-600"
+    >
+      False
+    </div>
+  </div>
+  <div class="text-gray-700 text-center p-2">Successful Landing</div>
+  <hr className="mt-0" />
+  <div class="grid grid-cols-2 gap-5 m-2">
+    <div
+      class="rounded text-center bg-green-300 py-2 px-4 m-1 hover:bg-green-600"
+    >
+      True
+    </div>
+    <div
+      class="rounded text-center bg-green-300 py-2 px-4 m-1 hover:bg-green-600"
+    >
+      False
+    </div>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,21 @@
+
+  <footer className="text-center fixed-bottom mb-1"><b>Developed By:</b> Abilash S</footer>
+</div>
+  <h2 class="font-bold p-2 m-2">SpaceX Launch Programs</h2>
+  <div class="gridlayout">
+    <spaceX-filter></spaceX-filter>
+    <div class="cardArea py-2, px-4 m-2" >
+      <!-- {{item.flight_number}} -->
+    </div>
+  </div>
+  <!-- card area -->
+
+<div class="cardwrapper" *ngFor="let item of space.spaceData">
+  <spaceX-card></spaceX-card>
+      <!-- {{item.mission_name}},
+      {{item.mission_id}} ,
+      {{item.launch_year}},
+      {{item.launch_success}},
+      LandSuccess : {{item.rocket.first_stage.cores[0].land_success}} -->
+</div>
+
