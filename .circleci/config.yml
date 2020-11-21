@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - heroku/install
-      - heroku/deply-via-git
+      - heroku/deploy-via-git
 
 workflows:
   heroku_deploy:
