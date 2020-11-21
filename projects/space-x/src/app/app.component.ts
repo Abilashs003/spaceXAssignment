@@ -3,13 +3,12 @@ import * as data from '../assets/sample.json';
 import { SpaceDataService } from './services/space-data.service';
 
 @Component({
-  selector: 'spaceX-root',
+  selector: 'space-x-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'spaceX';
-  spaceVehicles: any;
   yearsList = [
     2006,
     2007,
